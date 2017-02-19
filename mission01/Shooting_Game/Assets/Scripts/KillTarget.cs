@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class KillTarget : MonoBehaviour
@@ -8,23 +9,23 @@ public class KillTarget : MonoBehaviour
     public GameObject killEffect;
     public float timeToSelect = 3.0f;
     public int score;
+    public Text scoreText;
 
     private ParticleSystem.EmissionModule hitEffectEmission;
     private float countDown;
 
-    // Use this for initialization
     void Start()
     {
         score = 0;
         countDown = timeToSelect;
         hitEffectEmission = hitEffect.emission;
         hitEffectEmission.enabled = false;
+        scoreText.text = "Score : 0";
     }
 
-    // Update is called once per frame
     void Update()
     {
-        Transform camera = Camera.main.transform;
+        Transform camera = Camera.main.transform; // タグがMainCamera
         Ray ray = new Ray(camera.position, camera.rotation * Vector3.forward);
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit) && (hit.collider.gameObject == target))
@@ -43,6 +44,7 @@ public class KillTarget : MonoBehaviour
                 Instantiate(killEffect, target.transform.position,
                     target.transform.rotation);
                 score += 1;
+                scoreText.text = "Score : " + score;
                 countDown = timeToSelect;
                 SetRandomPosition(); // リポップ
             }
@@ -55,7 +57,7 @@ public class KillTarget : MonoBehaviour
         }
     }
 
-    // ランダムな場所に移動（リポップ respawn）
+    // リポップ respawn（ランダムな場所に移動）
     void SetRandomPosition()
     {
         float x = Random.Range(-100.0f, 100.0f);
