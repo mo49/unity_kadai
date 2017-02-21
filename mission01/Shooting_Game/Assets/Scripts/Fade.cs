@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class Fade : MonoBehaviour
 {
-    public float alfa;
+    public float alpha;
     public float speed = 0.005f;
     float red, green, blue;
 
@@ -20,8 +20,8 @@ public class Fade : MonoBehaviour
 
     void Update()
     {
-        GetComponent<Image>().color = new Color(red, green, blue, alfa);
-        alfa -= speed;
+        GetComponent<Image>().color = new Color(red, green, blue, alpha);
+        alpha -= speed;
     }
 
 }
