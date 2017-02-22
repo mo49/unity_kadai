@@ -32,5 +32,3 @@ public class CameraAxis : MonoBehaviour
         }
     }
 }
-
-// http://tasogare-games.hatenablog.jp/entry/20150607/1433680283
