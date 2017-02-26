@@ -5,7 +5,7 @@ using UnityEngine;
 public class RotateMyself : MonoBehaviour {
 
     public float speed = 0.05f;
-    public float timer = 10.0f;
+    public float timer = 15.0f;
     private float count;
     bool isOP = true;
 

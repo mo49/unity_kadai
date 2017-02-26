@@ -412,7 +412,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400034, guid: 955710ac48fa0b440b4bb43b730022fd, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11100000, guid: 955710ac48fa0b440b4bb43b730022fd, type: 2}
       propertyPath: m_AnimatePhysics
@@ -469,7 +469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 111f7d89051856349ae76c92044c4527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 10
+  timer: 25
 --- !u!1 &587781320 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100034, guid: 955710ac48fa0b440b4bb43b730022fd, type: 2}
@@ -494,6 +494,7 @@ GameObject:
   m_Component:
   - component: {fileID: 610579837}
   - component: {fileID: 610579838}
+  - component: {fileID: 610579839}
   m_Layer: 0
   m_Name: BirdEye
   m_TagString: Untagged
@@ -507,14 +508,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 610579836}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 12, z: 1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1782990941}
   m_Father: {fileID: 0}
   m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &610579838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -527,6 +528,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.05
+  timer: 15
+--- !u!114 &610579839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 610579836}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 111f7d89051856349ae76c92044c4527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 15
 --- !u!1 &626094153
 GameObject:
   m_ObjectHideFlags: 0
@@ -1216,7 +1230,7 @@ Transform:
   m_GameObject: {fileID: 1091077053}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 2.36, z: 81.1}
-  m_LocalScale: {x: 8, y: 8, z: 8}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 1208563519}
   m_Father: {fileID: 0}
@@ -1332,7 +1346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 111f7d89051856349ae76c92044c4527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 15
+  timer: 25
 --- !u!1 &1182828360
 GameObject:
   m_ObjectHideFlags: 0

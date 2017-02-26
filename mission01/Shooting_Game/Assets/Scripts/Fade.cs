@@ -14,7 +14,7 @@ public class Fade : MonoBehaviour
         green = GetComponent<Image>().color.g;
         blue = GetComponent<Image>().color.b;
         enabled = false;
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(10);
         enabled = true;
     }
 
