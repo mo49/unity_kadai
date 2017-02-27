@@ -11,6 +11,9 @@ public class KillTarget : MonoBehaviour
     public int score;
     public Text scoreText;
 
+    public AudioClip audioClip;
+    private AudioSource audioSource;
+
     private ParticleSystem.EmissionModule hitEffectEmission;
     private float countDown;
 
@@ -21,6 +24,9 @@ public class KillTarget : MonoBehaviour
         hitEffectEmission = hitEffect.emission;
         hitEffectEmission.enabled = false;
         scoreText.text = "Score : 0";
+
+        audioSource = gameObject.GetComponent<AudioSource>();
+        audioSource.clip = audioClip;
     }
 
     void Update()
@@ -37,6 +43,8 @@ public class KillTarget : MonoBehaviour
                 countDown -= Time.deltaTime;
                 hitEffect.transform.position = hit.point;
                 hitEffectEmission.enabled = true;
+
+                audioSource.Play();
             }
             else
             {

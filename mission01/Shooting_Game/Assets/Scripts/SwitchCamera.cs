@@ -6,6 +6,7 @@ public class SwitchCamera : MonoBehaviour {
 
     private GameObject MainCam;
     private GameObject SubCam;
+    public float timer = 10.0f;
 
     IEnumerator Start()
     {
@@ -15,8 +16,10 @@ public class SwitchCamera : MonoBehaviour {
         MainCam.SetActive(false);
 
         enabled = false;
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(timer);
         enabled = true;
+
+        Change();
 
     }
     
@@ -40,6 +43,11 @@ public class SwitchCamera : MonoBehaviour {
     */
 
     void Update()
+    {
+       
+    }
+
+    void Change()
     {
         MainCam.SetActive(true);
         SubCam.SetActive(false);
