@@ -31,7 +31,9 @@
 
 # 制作物の説明
 
-## 課題1 - Shooting_Game > hill_stage
+## 課題1
+
+### Shooting_Game > hill_stage
 
 敵に２秒間視線を合わせると、破壊パーティクルの発生、スコアの更新。
 
@@ -48,3 +50,8 @@
  - J：Jump
  - A:Attack
 
+### Museum > sao
+
+ウォークスルー型の美術館。
+
+美術館の骨格はBlenderで生成。
